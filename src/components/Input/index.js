@@ -7,7 +7,7 @@ class Input extends React.Component{
         super(props);
         this.state={
             floors:0,
-            units:[],
+            units:'',
             flag:0
         }
 

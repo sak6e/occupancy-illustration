@@ -6,11 +6,13 @@ export default class Output extends React.Component{
         this.createTable=this.createTable.bind(this);
     }
     createTable=()=>{
+        let st=this.props.units;
+        let sp=st.split(',');
         let table=[];
         for(var i=1;i<=this.props.floors;i++){
             let children=[];
             children.push(<td>{i}</td>)
-            for(var j=1;j<=this.props.units[i-1];j++){
+            for(var j=1;j<=sp[i-1];j++){
                 children.push(<td class="room">{i*100+j}</td>)
             }
         table.push(<tr>{children}</tr>)
